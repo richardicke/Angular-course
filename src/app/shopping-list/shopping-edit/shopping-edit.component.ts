@@ -11,7 +11,9 @@ export class ShoppingEditComponent implements OnInit {
   @ViewChild ('nameInput', {static: true}) nameInputRef: ElementRef;
   @ViewChild ('amountInput', {static: true}) amountInputRef: ElementRef;
   // @Output() ingredientAdded = new EventEmitter<{ name: string, amount: number }>();
-  // Instead of manually declaring the event payload type we can set it to the Ingredient model.
+  // Instead of manually declaring the event payload type (like above)
+  // we can just set it to the Ingredient model.
+  // Add decorator to make this emitter listenable to outside this component.
   @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
   onAddItem() {

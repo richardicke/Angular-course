@@ -10,8 +10,8 @@ import { Ingredient } from '../shared/ingredient.model';
 export class ShoppingListComponent implements OnInit {
   // ingredients is an array of objects of type Ingredient
   ingredients: Ingredient[] = [
-    new Ingredient('Apples', 5),
-    new Ingredient('Tomatoes', 10)
+    new Ingredient('Reuzel', 2),
+    new Ingredient('Zure zult', 10)
   ];
 
   onIngredientAdded(ingredient: Ingredient) {
