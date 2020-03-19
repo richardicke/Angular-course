@@ -10,6 +10,7 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   @Output() recipeWasSelected = new EventEmitter<Recipe>();
   // recipes is an array composed of Recipe objects.
+  // Add a bunch of recipes.
   recipes: Recipe[] = [
     new Recipe(
       'Frikandel Speciaal',
@@ -26,9 +27,15 @@ export class RecipeListComponent implements OnInit {
     new Recipe(
       'Afhaalchinees',
       'Ik heb mijn twijfels',
-      'https://media-cdn.tripadvisor.com/media/photo-s/11/39/f9/3f/mooi-verpakt-in-bakjes.jpg')              
+      'https://media-cdn.tripadvisor.com/media/photo-s/11/39/f9/3f/mooi-verpakt-in-bakjes.jpg'),
+    new Recipe(
+      'Haring',
+      'In één woord bah',
+      'https://hosting.photobucket.com/albums/y77/jopijopi/2015/weblog/haring.jpg~original')                    
   ];
 
+
+  
   onRecipeSelected(recipe: Recipe) {
     this.recipeWasSelected.emit(recipe)
   }
